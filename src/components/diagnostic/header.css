@@ -1,0 +1,51 @@
+.header {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    border-bottom: 1px solid var(--grey);
+    padding-bottom: 30px;
+
+    .category {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        flex: 1;
+        border-right: 1px solid var(--grey);
+        padding-right: 30px;
+
+        h2 {
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+
+            button {
+                all: unset;
+                color: var(--grey);
+                border-radius: 10px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 15px 30px;
+                cursor: pointer;
+                flex: 1;
+                text-transform: uppercase;
+
+                &:hover {
+                    opacity: 0.75;
+                }
+
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
+}

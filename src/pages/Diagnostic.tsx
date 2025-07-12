@@ -1,6 +1,11 @@
-// src/pages/Contribute.tsx
+import Header from "../components/diagnostic/Header";
+
 const Diagnostic = () => {
-    return <h2>Lister des boutons quoi</h2>;
+    return (
+        <>
+            <Header />
+        </>
+    );
 };
 
 export default Diagnostic;
