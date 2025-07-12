@@ -1,0 +1,100 @@
+:root {
+    /* COLORS */
+    --background: #0f0f0f;
+    --foreground: #dcdcdc;
+    --grey: #25262a;
+    --accent: #b4f99c;
+    --error: #ba332c;
+
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+
+    color: var(--foreground);
+    background-color: var(--background);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+
+    aside {
+        flex: 1;
+        max-width: 300px;
+        border-right: 1px solid var(--grey);
+        height: 100vh;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                text-decoration: none;
+                color: var(--foreground);
+                padding: 15px;
+                border-radius: 10px;
+
+                &:hover {
+                    background: var(--grey);
+                    color: var(--accent);
+
+                    svg path {
+                        fill: var(--accent);
+                    }
+                }
+            }
+        }
+
+        button {
+            all: unset;
+            background: var(--accent);
+            color: var(--grey);
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            cursor: pointer;
+            gap: 15px;
+            font-weight: 600;
+
+            &:disabled {
+                background: var(--grey);
+                color: #dcdcdc25;
+
+                path {
+                    fill: var(--foreground);
+                    opacity: 0.25;
+                }
+            }
+        }
+    }
+}
