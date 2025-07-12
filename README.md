@@ -95,7 +95,7 @@ Projet distribue sous license GNU - General truc
 
 ### 📸 Screenshots
 
-*Screenshots à ajouter*
+![Screenshot](./public/screenshot.png)
 
 ---
 
