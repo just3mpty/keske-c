@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const Sidenav = () => {
     const tabs = [
         {
@@ -81,10 +83,15 @@ const Sidenav = () => {
             </div>
             <nav>
                 {tabs.map((tab, index) => (
-                    <a href={tab.path} key={index}>
+                    <NavLink
+                        to={tab.path}
+                        key={index}
+                        className={({ isActive }) =>
+                            `link ${isActive ? "active" : ""}`
+                        }>
                         {tab.icon}
                         <span>{tab.title}</span>
-                    </a>
+                    </NavLink>
                 ))}
             </nav>
             <button disabled>

@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Diagnostic from "./pages/Diagnostic";
+import Contribute from "./pages/Contribute";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>
@@ -12,6 +13,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
                     <Route path="/diagnostic" element={<Diagnostic />} />
+                    <Route path="/contribute" element={<Contribute />} />
                 </Route>
             </Routes>
         </BrowserRouter>
