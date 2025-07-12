@@ -30,6 +30,7 @@
 .container {
     width: 100%;
     display: flex;
+    position: relative;
 
     aside {
         flex: 1;
@@ -40,6 +41,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        position: sticky;
+        top: 0;
 
         .logo {
             display: flex;
@@ -96,5 +99,16 @@
                 }
             }
         }
+    }
+
+    .system-infos {
+        display: flex;
+        /* grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fit, 1fr); */
+        flex-wrap: wrap;
+        gap: 15px;
+        row-gap: 15px;
+        flex: 1;
+        padding: 30px;
     }
 }

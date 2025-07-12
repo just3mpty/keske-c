@@ -1,0 +1,52 @@
+.card {
+    padding: 15px;
+    background: var(--grey);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: auto;
+    min-width: 550px;
+
+    h3,
+    h4 {
+        color: var(--accent);
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .properties {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .slot {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .property {
+            display: flex;
+            align-items: center;
+
+            p {
+                flex: 1;
+                font-size: 16px;
+                text-align: left;
+            }
+
+            p.propertyname {
+                font-weight: 600;
+            }
+        }
+    }
+    &:nth-child(1) {
+        background: var(--accent);
+        color: var(--grey);
+
+        h3 {
+            color: var(--grey);
+        }
+    }
+}
