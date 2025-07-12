@@ -1,5 +1,5 @@
 import "./card.css";
-type CardPRops = {
+type CardProps = {
     title: string;
     props: [
         {
@@ -19,7 +19,7 @@ type CardPRops = {
         }
     ];
 };
-const Card = (cardprops: CardPRops) => {
+const Card = (cardprops: CardProps) => {
     const { title, props, slots } = cardprops;
 
     return (
