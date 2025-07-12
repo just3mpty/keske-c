@@ -93,6 +93,7 @@
             &:disabled {
                 background: var(--grey);
                 color: #dcdcdc25;
+                cursor: not-allowed;
 
                 path {
                     fill: var(--foreground);

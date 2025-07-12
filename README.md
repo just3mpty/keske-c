@@ -37,7 +37,6 @@ Ce projet est né dans le prolongement de l’outil **"Toolbox"** de [La Capsule
   ```bash
   cargo install tauri-cli
   ```
-  
 
 ### 🚀 Lancer le projet
 
@@ -61,7 +60,7 @@ Les contributions sont les **bienvenues** !
 
 Que tu sois débutant ou confirmé, tu peux tout à fait participer !
 
-#### 📍 Exemple de contributions possible :
+#### 📍 Exemple de contributions possible
 
 - Ajouter des modules (diagnostic réseau, température, etc.)
   
@@ -73,7 +72,6 @@ Que tu sois débutant ou confirmé, tu peux tout à fait participer !
   
 - ...
   
-
 #### 📜 Pour commencer
 
 1. Fork le repo
@@ -84,7 +82,6 @@ Que tu sois débutant ou confirmé, tu peux tout à fait participer !
   
 4. Crée une PR
   
-
 ---
 
 ### 📄 License
@@ -95,10 +92,10 @@ Projet distribue sous license GNU - General truc
 
 ### 📸 Screenshots
 
-![Screenshot](./public/screenshot.png)
+![Screenshot](./public/preview.gif)
 
 ---
 
 ### 📬Contact
 
-Une question, une idée, envie de collaborer ? Tu peux me contacter via *3mpty.dev@gmail.com* ou ouvrir une issue directement sur Github.
+Une question, une idée, envie de collaborer ? Tu peux me contacter via *<3mpty.dev@gmail.com>* ou ouvrir une issue directement sur Github.
