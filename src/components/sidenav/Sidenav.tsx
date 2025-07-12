@@ -1,6 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Sidenav = () => {
+    const location = useLocation();
+    const isHome = location.pathname === "/";
     const tabs = [
         {
             title: "Accueil",
@@ -75,6 +77,11 @@ const Sidenav = () => {
             path: "/contribute",
         },
     ];
+
+    const printData = () => {
+        window.print();
+    };
+
     return (
         <aside>
             <div className="logo">
@@ -94,7 +101,7 @@ const Sidenav = () => {
                     </NavLink>
                 ))}
             </nav>
-            <button disabled>
+            <button disabled={!isHome} onClick={printData}>
                 <svg
                     width="32"
                     height="30"

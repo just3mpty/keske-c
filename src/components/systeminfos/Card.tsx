@@ -1,24 +1,6 @@
+import { CardProps } from "../../types/CardProps";
 import "./card.css";
-type CardProps = {
-    title: string;
-    props: [
-        {
-            property: string;
-            value: string;
-        }
-    ];
-    slots?: [
-        {
-            number: string;
-            props: [
-                {
-                    property: string;
-                    value: string;
-                }
-            ];
-        }
-    ];
-};
+
 const Card = (cardprops: CardProps) => {
     const { title, props, slots } = cardprops;
 

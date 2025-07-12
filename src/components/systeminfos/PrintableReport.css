@@ -1,0 +1,61 @@
+/* Cacher le composant à l'écran */
+.print-only {
+    display: none;
+}
+
+/* L'afficher uniquement lors de l'impression */
+@media print {
+    .print-only {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 10px;
+        color: #000;
+        background: #fff;
+        z-index: 9999;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    .print-only,
+    .print-only * {
+        visibility: visible;
+    }
+
+    .print-card {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+        page-break-inside: avoid;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+    }
+
+    h3 {
+        font-size: 16px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    li {
+        margin: 4px 0;
+    }
+}

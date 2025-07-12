@@ -1,40 +1,9 @@
-// src/pages/Home.tsx
-import { useEffect, useState } from "react";
-import { invoke } from "@tauri-apps/api/core";
 import Card from "../components/systeminfos/Card";
 import "../App.css";
-
-type CardProps = {
-    title: string;
-    props: [
-        {
-            property: string;
-            value: string;
-        }
-    ];
-    slots?: [
-        {
-            number: string;
-            props: [
-                {
-                    property: string;
-                    value: string;
-                }
-            ];
-        }
-    ];
-};
+import { useSystemInfo } from "../context/SystemInfoContext";
 
 const Home = () => {
-    const [data, setData] = useState<CardProps[]>([]);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        invoke("systeminfo")
-            .then((res) => setData(res as CardProps[]))
-            .catch((err) => console.error(err))
-            .finally(() => setLoading(false));
-    }, []);
+    const { systemData, loading } = useSystemInfo();
 
     return loading ? (
         <div className="chargement">
@@ -43,7 +12,7 @@ const Home = () => {
         </div>
     ) : (
         <>
-            {data.map((card, i) => (
+            {systemData?.map((card, i) => (
                 <Card key={i} {...card} />
             ))}
         </>
